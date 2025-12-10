@@ -94,7 +94,7 @@
     padding: 12px;
     box-shadow:
         0 25px 50px -12px rgba(0, 0, 0, 0.5),
-        0 0 100px -20px rgba(59, 130, 246, 0.3);
+        0 0 120px -10px rgba(59, 130, 246, 0.6);
     /* Blue glow */
     transform: rotateY(-10deg) rotateX(5deg);
     border: 1px solid rgba(255, 255, 255, 0.1);
