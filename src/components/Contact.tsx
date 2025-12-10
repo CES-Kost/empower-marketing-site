@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react';
+import React, { type FormEvent } from 'react';
 import styles from './Contact.module.css';
 
 export const Contact: React.FC = () => {
