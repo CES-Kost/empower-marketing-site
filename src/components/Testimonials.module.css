@@ -1,0 +1,69 @@
+.section {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    padding-bottom: 8rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+
+.stars {
+    color: #fbbf24;
+    /* Amber 400 */
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
+
+.quote {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+}
+
+.info h4 {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: white;
+}
+
+.info span {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
