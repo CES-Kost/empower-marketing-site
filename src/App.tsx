@@ -3,6 +3,7 @@ import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-
 import { Home } from './pages/Home';
 import { MenuPage } from './pages/MenuPage';
 import { PayrollPage } from './pages/PayrollPage';
+import { ReportingPage } from './pages/ReportingPage';
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -39,6 +40,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/payroll" element={<PayrollPage />} />
+        <Route path="/reporting" element={<ReportingPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
