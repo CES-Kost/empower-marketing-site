@@ -16,6 +16,7 @@ export const Header: React.FC = () => {
                     <Link to="/menu" className={styles.link}>Menu</Link>
                     <Link to="/payroll" className={styles.link}>Payroll</Link>
                     <Link to="/reporting" className={styles.link}>Reporting</Link>
+                    <Link to="/host" className={styles.link}>Host</Link>
                     <a href="/#contact" className={styles.link}>Contact</a>
                 </nav>
 

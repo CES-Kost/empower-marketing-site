@@ -4,6 +4,7 @@ import { Home } from './pages/Home';
 import { MenuPage } from './pages/MenuPage';
 import { PayrollPage } from './pages/PayrollPage';
 import { ReportingPage } from './pages/ReportingPage';
+import { HostPage } from './pages/HostPage';
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -41,6 +42,7 @@ function App() {
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/payroll" element={<PayrollPage />} />
         <Route path="/reporting" element={<ReportingPage />} />
+        <Route path="/host" element={<HostPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
