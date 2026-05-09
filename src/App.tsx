@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { MenuPage } from './pages/MenuPage';
+import { PayrollPage } from './pages/PayrollPage';
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -37,6 +38,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<MenuPage />} />
+        <Route path="/payroll" element={<PayrollPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
