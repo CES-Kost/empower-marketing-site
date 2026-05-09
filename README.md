@@ -1,73 +1,43 @@
-# React + TypeScript + Vite
+# empower-marketing-site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Public marketing site for Empower POS Solutions. React + TypeScript + Vite, path-based routing via react-router-dom v6, served behind Caddy in production.
 
-Currently, two official plugins are available:
+## Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `/` — Home
+- `/menu` — Empower Menu product page
 
-## React Compiler
+(Sibling product pages — Reporting, Host, Tools, Payroll — are stacked PRs.)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Dev
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npm install
+npm run dev          # http://localhost:5173
+npm run build        # tsc -b && vite build → dist/
+npm run preview      # serve dist/ on http://localhost:4173
+npm run lint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Docker preview (Nova pattern)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+PR previews and prod serve the static build behind Caddy in a single image. No Vercel.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Build + run locally:
+
+```sh
+docker build -t empower-marketing:preview .
+docker run --rm -p 8080:8080 empower-marketing:preview
+# → http://localhost:8080
 ```
+
+The image is multi-stage (`node:20-alpine` build → `caddy:2-alpine` runtime) and ships a `Caddyfile` with the SPA fallback (`try_files {path} /index.html`) plus immutable caching for hashed `assets/*` and `no-cache` for `index.html`. Container listens on `:8080`.
+
+For Nova preview deploys: build the image, push to Matt's registry, and have Caddy on Nova reverse-proxy a preview subdomain to the container. Pulse owns the Caddy block on Nova.
+
+## Routing notes
+
+- Path-based via `react-router-dom` v6 — `/menu` not `/#/menu`. SEO + per-route Open Graph previews work as you'd expect.
+- Old `#/foo` URLs auto-redirect on first load (`HashUrlBackcompat` in `App.tsx`) so any link still floating around in dealer materials lands on the right page.
+- In-page anchors (`/#contact`, `/#solutions`) stay as plain `<a>` tags — browser handles the scroll natively, `ScrollManager` handles cross-route scroll-to-top + scroll-to-anchor.
+- Any prod web server fronting this build needs the SPA fallback rule (already in the included `Caddyfile`).
