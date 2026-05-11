@@ -25,9 +25,15 @@ npm run lint
 
 ## Deploy
 
-The static build runs behind Caddy in a single Docker image. **No Vercel** — the Vercel project linkage is being torn down; if you still see a Vercel preview URL on a PR, ignore it.
+### Current — Vercel auto-deploy
 
-Build + run locally:
+The repo is linked to the Vercel project `matt-kosts-projects/empower-marketing-site`. Every push to `main` builds and ships to <https://empower-marketing-site.vercel.app>. PRs get their own preview URL. No CI workflow lives in this repo — Vercel handles the whole pipeline.
+
+To point a real domain at the site, redirect or CNAME to the Vercel production alias (or add the domain to the Vercel project).
+
+### Self-host option (Docker)
+
+The repo also ships a Dockerfile + Caddyfile for self-hosting whenever we want to take it off Vercel:
 
 ```sh
 docker build -t empower-marketing:preview .
@@ -35,15 +41,7 @@ docker run --rm -p 8080:8080 empower-marketing:preview
 # → http://localhost:8080
 ```
 
-The image is multi-stage (`node:20-alpine` build → `caddy:2-alpine` runtime) and ships a `Caddyfile` with the SPA fallback (`try_files {path} /index.html`) plus immutable caching for hashed `assets/*` and `no-cache` for `index.html`. Container listens on `:8080`.
-
-### Preview (Nova)
-
-While iterating: build the image, push to Matt's registry on Nova, and have Caddy on Nova reverse-proxy a preview subdomain to the container. Pulse owns the Caddy block on Nova.
-
-### Production (empowerhost VPS)
-
-Final home for the site is the empowerhost VPS (66.94.98.135) so marketing lives next to `menu.empowerpos.com` / `v2host-api.empowerpos.com`. Same image, deployed alongside the existing `safe-deploy.sh` services. Subdomain is pending Johnnie's call.
+Multi-stage (`node:20-alpine` build → `caddy:2-alpine` runtime); the Caddyfile has the SPA fallback (`try_files {path} /index.html`) plus immutable caching for hashed `assets/*` and `no-cache` for `index.html`. Container listens on `:8080`. Eventual prod home for this path would be the empowerhost VPS alongside the existing `safe-deploy.sh` services.
 
 ## Routing notes
 
