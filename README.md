@@ -5,9 +5,13 @@ Public marketing site for Empower POS Solutions. React + TypeScript + Vite, path
 ## Pages
 
 - `/` — Home
-- `/menu` — Empower Menu product page
+- `/menu` — Empower Menu
+- `/payroll` — Empower Payroll
+- `/reporting` — Empower Insight (reporting / dashboard)
+- `/host` — Empower Host
+- `/tools` — Empower Tools
 
-(Sibling product pages — Reporting, Host, Tools, Payroll — are stacked PRs.)
+Page-by-page rebuild is mid-flight; footer anchor cleanup wraps the architecture pass.
 
 ## Dev
 
@@ -19,9 +23,9 @@ npm run preview      # serve dist/ on http://localhost:4173
 npm run lint
 ```
 
-## Docker preview (Nova pattern)
+## Deploy
 
-PR previews and prod serve the static build behind Caddy in a single image. No Vercel.
+The static build runs behind Caddy in a single Docker image. **No Vercel** — the Vercel project linkage is being torn down; if you still see a Vercel preview URL on a PR, ignore it.
 
 Build + run locally:
 
@@ -33,7 +37,13 @@ docker run --rm -p 8080:8080 empower-marketing:preview
 
 The image is multi-stage (`node:20-alpine` build → `caddy:2-alpine` runtime) and ships a `Caddyfile` with the SPA fallback (`try_files {path} /index.html`) plus immutable caching for hashed `assets/*` and `no-cache` for `index.html`. Container listens on `:8080`.
 
-For Nova preview deploys: build the image, push to Matt's registry, and have Caddy on Nova reverse-proxy a preview subdomain to the container. Pulse owns the Caddy block on Nova.
+### Preview (Nova)
+
+While iterating: build the image, push to Matt's registry on Nova, and have Caddy on Nova reverse-proxy a preview subdomain to the container. Pulse owns the Caddy block on Nova.
+
+### Production (empowerhost VPS)
+
+Final home for the site is the empowerhost VPS (66.94.98.135) so marketing lives next to `menu.empowerpos.com` / `v2host-api.empowerpos.com`. Same image, deployed alongside the existing `safe-deploy.sh` services. Subdomain is pending Johnnie's call.
 
 ## Routing notes
 
