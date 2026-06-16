@@ -11,16 +11,13 @@ export const Features: React.FC = () => {
                         alt="Empower POS Reports"
                         className={styles.mainImage}
                     />
-                    <div className={styles.floatingCard}>
-                        <div className={styles.stat}>30%</div>
-                        <div className={styles.statLabel}>Avg. increase in table turnover speed</div>
-                    </div>
+                    {/* KB-121: fabricated "30% avg. increase in table turnover" stat card removed (claim-safety). */}
                 </div>
 
                 <div className={styles.contentCol}>
                     <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 700 }}>Built for speed using the latest tech.</h2>
                     <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>
-                        We don't use legacy code. Empower POS is built on a modern cloud architecture that ensures 99.99% uptime and instant sync across all your devices.
+                        We don't use legacy code. Empower POS is built on a modern cloud architecture that delivers reliable uptime and instant sync across all your devices.
                     </p>
 
                     <div className={styles.featureList}>
