@@ -131,6 +131,19 @@
     color: var(--text-muted);
 }
 
+.previewImg {
+    aspect-ratio: 4/3;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 20px 40px -8px rgba(0, 0, 0, 0.5),
+        0 0 60px -10px rgba(59, 130, 246, 0.25);
+    display: block;
+}
+
 .previewIcon {
     font-size: 3.5rem;
     opacity: 0.6;
