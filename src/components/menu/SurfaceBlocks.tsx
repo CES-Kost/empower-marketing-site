@@ -9,6 +9,7 @@ interface Surface {
     bullets: string[];
     icon: string;
     flip?: boolean;
+    image?: string;
 }
 
 const surfaces: Surface[] = [
@@ -51,6 +52,7 @@ const surfaces: Surface[] = [
             'Per-screen layout — left counter ≠ drive-thru ≠ pickup wall',
         ],
         icon: '📺',
+        image: '/assets/menu-signage-board.png',
     },
     {
         id: 'wine-beer',
@@ -114,11 +116,20 @@ export const SurfaceBlocks: React.FC = () => {
                             </div>
 
                             <div className={styles.surfaceVisual}>
-                                {/* TODO(KB-43 asset call): real screenshot for {s.id} */}
-                                <div className={styles.preview} data-surface={s.id}>
-                                    <span className={styles.previewIcon}>{s.icon}</span>
-                                    <span className={styles.previewLabel}>{s.eyebrow} preview</span>
-                                </div>
+                                {s.image ? (
+                                    <img
+                                        className={styles.previewImg}
+                                        src={s.image}
+                                        alt={`Empower Menu — ${s.eyebrow}`}
+                                        loading="lazy"
+                                    />
+                                ) : (
+                                    /* TODO(KB-43 asset call): real screenshot for {s.id} */
+                                    <div className={styles.preview} data-surface={s.id}>
+                                        <span className={styles.previewIcon}>{s.icon}</span>
+                                        <span className={styles.previewLabel}>{s.eyebrow} preview</span>
+                                    </div>
+                                )}
                             </div>
                         </article>
                     ))}
