@@ -1,23 +1,23 @@
 :root {
   /* Brand Colors */
-  --color-primary: #3b82f6; /* Tech Blue */
-  --color-primary-dark: #1d4ed8;
-  --color-primary-light: #60a5fa;
-  --color-accent: #06b6d4; /* Cyan/Glow */
-  --color-gradient-start: #2563eb;
-  --color-gradient-end: #06b6d4;
+  --color-primary: #4F8BFF; /* EmpowerColors blue */
+  --color-primary-dark: #2F6BE0;
+  --color-primary-light: #6BA3FF;
+  --color-accent: #4DA6FF; /* Blue accent (was cyan; standardized to EmpowerColors) */
+  --color-gradient-start: #4F8BFF;
+  --color-gradient-end: #4DA6FF;
 
-  /* Backgrounds */
-  --bg-dark: #0f172a; /* Slate 900 */
-  --bg-darker: #020617; /* Slate 950 */
+  /* Backgrounds (EmpowerColors / Dashboard app) */
+  --bg-dark: #1A2735; /* surface */
+  --bg-darker: #0F1923; /* darkest bg */
   --bg-light: #f8fafc; /* Slate 50 */
-  --bg-card-dark: #1e293b; /* Slate 800 */
+  --bg-card-dark: #1E2D3D; /* card */
   --bg-card-light: #ffffff;
 
   /* Text */
   --text-main: #f1f5f9; /* Slate 100 (on dark) */
   --text-muted: #94a3b8; /* Slate 400 */
-  --text-on-light: #1e293b; /* Slate 800 */
+  --text-on-light: #1E2D3D; /* Slate 800 */
   --text-muted-on-light: #64748b; /* Slate 500 */
 
   /* Typography */
@@ -32,6 +32,6 @@
   --radius-full: 9999px;
 
   /* Effects */
-  --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.3);
+  --shadow-glow: 0 0 20px rgba(77, 166, 255, 0.3);
   --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }

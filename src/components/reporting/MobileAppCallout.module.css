@@ -10,7 +10,7 @@
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.1), transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(77, 166, 255, 0.1), transparent 60%),
         radial-gradient(ellipse at 20% 80%, rgba(37, 99, 235, 0.1), transparent 60%);
     pointer-events: none;
 }
@@ -68,9 +68,9 @@
 }
 
 .storeBadge:hover {
-    border-color: rgba(6, 182, 212, 0.4);
+    border-color: rgba(77, 166, 255, 0.4);
     transform: translateY(-2px);
-    background: rgba(6, 182, 212, 0.05);
+    background: rgba(77, 166, 255, 0.05);
 }
 
 .storeIcon {
@@ -109,7 +109,7 @@
     width: 220px;
     aspect-ratio: 9/19;
     border-radius: 32px;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background: linear-gradient(135deg, #1A2735, #1E2D3D);
     border: 1px solid rgba(255, 255, 255, 0.12);
     padding: 14px 10px;
     box-shadow:

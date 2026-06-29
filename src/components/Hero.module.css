@@ -51,8 +51,8 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: rgba(6, 182, 212, 0.1);
-    border: 1px solid rgba(6, 182, 212, 0.3);
+    background: rgba(77, 166, 255, 0.1);
+    border: 1px solid rgba(77, 166, 255, 0.3);
     border-radius: var(--radius-full);
     color: var(--color-accent);
     font-size: 0.875rem;
@@ -103,7 +103,7 @@
 .screen {
     overflow: hidden;
     border-radius: 12px;
-    background: #1e293b;
+    background: #1E2D3D;
     aspect-ratio: 4/3;
 }
 
