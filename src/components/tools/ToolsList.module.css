@@ -44,7 +44,7 @@
 }
 
 .tool:hover {
-    border-color: rgba(6, 182, 212, 0.4);
+    border-color: rgba(77, 166, 255, 0.4);
     transform: translateY(-4px);
 }
 
@@ -71,8 +71,8 @@
     letter-spacing: 0.12em;
     color: var(--color-accent);
     padding: 0.3rem 0.7rem;
-    background: rgba(6, 182, 212, 0.1);
-    border: 1px solid rgba(6, 182, 212, 0.3);
+    background: rgba(77, 166, 255, 0.1);
+    border: 1px solid rgba(77, 166, 255, 0.3);
     border-radius: var(--radius-full);
 }
 
@@ -118,7 +118,7 @@
     height: 0.45rem;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
-    box-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+    box-shadow: 0 0 8px rgba(77, 166, 255, 0.5);
 }
 
 .toolCta {
