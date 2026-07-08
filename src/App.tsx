@@ -45,6 +45,7 @@ function App() {
         <Route path="/reporting" element={<ReportingPage />} />
         <Route path="/host" element={<HostPage />} />
         <Route path="/tools" element={<ToolsPage />} />
+        <Route path="/contact" element={<Navigate to="/#contact" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
