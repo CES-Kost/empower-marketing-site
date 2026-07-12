@@ -1,10 +1,10 @@
 // KB-174 — Contact Us form handler. Runs server-side only (Vercel serverless
-// function) so CRM_MCP_API_KEY never reaches the browser. The public form
+// function) so CONTACT_FORM_API_KEY never reaches the browser. The public form
 // POSTs here; this forwards a mapped payload to CES CRM's POST /api/leads/.
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const CRM_LEADS_URL = process.env.CRM_LEADS_URL || 'https://crm.cuttingedgesys.com/api/leads/';
-const CRM_MCP_API_KEY = process.env.CRM_MCP_API_KEY;
+const CONTACT_FORM_API_KEY = process.env.CONTACT_FORM_API_KEY;
 const LEAD_SOURCE = 'Empower Website — Contact Us';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -81,8 +81,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    if (!CRM_MCP_API_KEY) {
-        console.error('api/contact: CRM_MCP_API_KEY is not configured');
+    if (!CONTACT_FORM_API_KEY) {
+        console.error('api/contact: CONTACT_FORM_API_KEY is not configured');
         return res.status(500).json({ error: 'Server misconfigured. Please try again later.' });
     }
 
@@ -140,7 +140,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-Api-Key': CRM_MCP_API_KEY,
+                'X-Api-Key': CONTACT_FORM_API_KEY,
             },
             body: JSON.stringify(leadPayload),
         });
