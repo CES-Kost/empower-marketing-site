@@ -1,36 +1,44 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Solutions.module.css';
 
+/**
+ * Reconciled against Reese's KB-43 home draft ("Everything you need to keep
+ * business moving") — the old six cards named generic template features
+ * (Online Ordering, Inventory Management, Employee Scheduling as standalone
+ * products) that don't map to Empower's actual shipped product line. Replaced
+ * with the real five-going-on-six products, each linking to its own page.
+ */
 const solutions = [
     {
-        title: "Dashboard & Reports",
-        desc: "Real-time sales data, labor costs, and profit margins at a glance. Make smarter decisions from anywhere.",
-        icon: "📊"
+        title: "Empower Host",
+        desc: "See open tables at a glance, seat the right party fast, and keep the waitlist moving.",
+        icon: "🛎️",
+        href: "/host",
     },
     {
-        title: "Payroll & Accounting",
-        desc: "Seamless integration with QuickBooks and automated payroll processing. Save hours of manual work every week.",
-        icon: "💼"
+        title: "Empower Menu Displays",
+        desc: "Bright, clear displays make your specials pop and help guests decide faster, so servers spend less time answering questions and more time on the floor.",
+        icon: "🍽️",
+        href: "/menu",
     },
     {
-        title: "Reservations & Waitlist",
-        desc: "Manage table turnover and wait times efficiently. Keep hosts organized and guests happy.",
-        icon: "📅"
+        title: "Empower Payroll",
+        desc: "Punches, tips, and breaks flow straight into the payroll provider you already use, with a tip-pool calculator built in — not bolted on.",
+        icon: "💸",
+        href: "/payroll",
     },
     {
-        title: "Inventory Management",
-        desc: "Track ingredients down to the ounce. Auto-reorder alerts and food cost analysis.",
-        icon: "📦"
+        title: "Empower Insight",
+        desc: "A live dashboard, a custom report builder, and scheduled reports that land in your inbox, all reading from the same POS data your kitchen trusts.",
+        icon: "📊",
+        href: "/reporting",
     },
     {
-        title: "Online Ordering",
-        desc: "Commission-free ordering integrated directly into your POS. Take control of your delivery margins.",
-        icon: "🛍️"
-    },
-    {
-        title: "Employee Scheduling",
-        desc: "Smart scheduling tools that help you optimize labor costs and reduce overtime.",
-        icon: "👥"
+        title: "Built to Stay Up",
+        desc: "The internet drops, you don't. Orders keep flowing during an outage and sync automatically the moment you reconnect.",
+        icon: "☁️",
+        href: "/host",
     }
 ];
 
@@ -39,8 +47,8 @@ export const Solutions: React.FC = () => {
         <section id="solutions" className={styles.section}>
             <div className="container">
                 <div className={styles.header}>
-                    <h2 className={styles.headline}>Everything you need to run your restaurant</h2>
-                    <p className={styles.subheadline}>A unified platform that replaces multiple fragmented tools.</p>
+                    <h2 className={styles.headline}>Everything you need to keep business moving</h2>
+                    <p className={styles.subheadline}>One login, one system reading from the same data — not five tools that don't talk to each other.</p>
                 </div>
 
                 <div className={styles.grid}>
@@ -51,7 +59,7 @@ export const Solutions: React.FC = () => {
                             </div>
                             <h3 className={styles.title}>{item.title}</h3>
                             <p className={styles.desc}>{item.desc}</p>
-                            <a href="#" className={styles.link}>Learn more →</a>
+                            <Link to={item.href} className={styles.link}>Learn more →</Link>
                         </div>
                     ))}
                 </div>

@@ -19,14 +19,14 @@ export const Hero: React.FC = () => {
                         <span>🇺🇸</span> Serving restaurants across the US
                     </div>
                     <h1 className={styles.headline}>
-                        Cut costs, eliminate manual work, and <span className="text-gradient">grow with real-time insights.</span>
+                        Move more. <span className="text-gradient">Make more.</span>
                     </h1>
                     <p className={styles.subheadline}>
-                        The all-in-one POS platform designed for speed, efficiency, and scalability. From fine dining to fast workflows.
+                        The all-in-one platform that brings your whole operation together, so service flows, your team stays in step, and you stay in control.
                     </p>
                     <div className={styles.buttons}>
-                        <button className="btn btn-primary">Contact Sales</button>
-                        <button className="btn btn-secondary">Watch Demo</button>
+                        <a href="/#contact" className="btn btn-primary">Talk to a Dealer</a>
+                        <a href="/#contact" className="btn btn-secondary">Watch Demo</a>
                     </div>
                 </div>
 

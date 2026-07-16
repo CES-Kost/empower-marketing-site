@@ -19,11 +19,11 @@ export const Footer: React.FC = () => {
                 <div className={styles.col}>
                     <h4>Product</h4>
                     <ul>
-                        <li><Link to="/menu">Empower Menu</Link></li>
-                        <li><a href="/#solutions">Reporting</a></li>
+                        <li><Link to="/host">Host</Link></li>
+                        <li><Link to="/menu">Menu Displays</Link></li>
                         <li><Link to="/payroll">Payroll</Link></li>
-                        <li><a href="/#solutions">Host</a></li>
-                        <li><a href="/#solutions">Tools</a></li>
+                        <li><Link to="/reporting">Reporting</Link></li>
+                        <li><Link to="/tools">Tools</Link></li>
                     </ul>
                 </div>
 

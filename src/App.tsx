@@ -5,6 +5,7 @@ import { MenuPage } from './pages/MenuPage';
 import { PayrollPage } from './pages/PayrollPage';
 import { ReportingPage } from './pages/ReportingPage';
 import { HostPage } from './pages/HostPage';
+import { CateringPage } from './pages/CateringPage';
 import { ToolsPage } from './pages/ToolsPage';
 
 function ScrollManager() {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/payroll" element={<PayrollPage />} />
         <Route path="/reporting" element={<ReportingPage />} />
         <Route path="/host" element={<HostPage />} />
+        <Route path="/catering" element={<CateringPage />} />
         <Route path="/tools" element={<ToolsPage />} />
         <Route path="/contact" element={<Navigate to="/#contact" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />

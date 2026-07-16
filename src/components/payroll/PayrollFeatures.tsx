@@ -14,10 +14,10 @@ interface Feature {
 /**
  * Feature blocks for the Payroll page.
  *
- * Tip-pool framing: shipping as a "now" bullet because the KB-7 build is in
- * flight on Cal's lane (PR #11 ready for merge). If KB-7 slips past launch,
- * swap the tip-pool block back to a "coming this quarter" framing — see
- * KB-47 spec note 2026-05-01 (gating decision).
+ * Tip-pool reopen/regenerate capability is confirmed real and deployed to
+ * prod (2026-06-24) but admin-gated only, not yet rolled out to customers
+ * (KB-7, Cal's lane) — framed "launching soon" per Reese's content-doc
+ * directive, not present-tense. Do not flip to present-tense until KB-7 GA.
  */
 const features: Feature[] = [
     {
@@ -51,11 +51,12 @@ const features: Feature[] = [
         id: 'tip-pool',
         eyebrow: 'Tip Pool Calculator — Bundled',
         title: 'Tip pooling that matches what your back office actually does',
-        desc: 'Gross or net of credit-card fees, role-weighted shares, hourly-driven splits — Empower\'s tip-pool engine handles the real-world distribution rules your operators run, then folds the result into the same payroll export as everything else. No separate tool, no separate invoice.',
+        desc: 'Gross or net of credit-card fees, role-weighted shares, hourly-driven splits — Empower\'s tip-pool engine handles the real-world distribution rules your operators run, then folds the result into the same payroll export as everything else. Launching soon: fix a bad clock-in or a mis-keyed tip without starting over in a spreadsheet — reopen the closed day, fix it, regenerate the split.',
         bullets: [
             'Gross or net-of-CC basis (default: net-of-CC)',
             'Role-weighted shares (server / busser / bar / runner)',
             'Hourly × hours-worked × share weighting',
+            'Reopen-and-regenerate for clock-in/tip corrections — launching soon',
             'Preset library + per-config overrides',
             'Built into Empower Payroll — not a paid add-on',
         ],

@@ -122,9 +122,9 @@ export const Contact: React.FC = () => {
 
             <div className={`container ${styles.container}`}>
                 <div className={styles.textCol}>
-                    <h2 className={styles.headline}>Ready to upgrade your restaurant?</h2>
+                    <h2 className={styles.headline}>Ready to Make More?</h2>
                     <p className={styles.subheadline}>
-                        Join thousands of restaurants running smarter, faster, and more profitably with Empower POS.
+                        Tell us a little about your operation and we'll set up a discovery call to see what fits.
                     </p>
 
                     <div className={styles.benefits}>
