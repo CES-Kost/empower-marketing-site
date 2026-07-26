@@ -58,11 +58,15 @@ export const MobileAppCallout: React.FC = () => {
                                 <span className={styles.phoneValue}>26.4%</span>
                             </div>
                             <div className={styles.phoneRowMuted}>
-                                <span>Live · Genius POS</span>
+                                <span>Sample · Genius POS</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className={`container ${styles.note}`}>
+                Demo content for marketing illustration only — sample figures, not live restaurant data.
             </div>
         </section>
     );
