@@ -5,7 +5,6 @@ import { DealerCTA } from '../components/DealerCTA';
 import { MenuHero } from '../components/menu/MenuHero';
 import { SurfaceBlocks } from '../components/menu/SurfaceBlocks';
 import { PosIntegrationCallout } from '../components/menu/PosIntegrationCallout';
-import { MenuTestimonial } from '../components/menu/MenuTestimonial';
 
 export const MenuPage: React.FC = () => {
     return (
@@ -14,7 +13,7 @@ export const MenuPage: React.FC = () => {
             <MenuHero />
             <SurfaceBlocks />
             <PosIntegrationCallout />
-            <MenuTestimonial />
+            {/* KB-232: testimonial hidden until Johnnie's real quote lands — no bracket placeholder or named pick-owner in public markup */}
             <DealerCTA
                 headline="Ready to ship one menu to every surface?"
                 subheadline="Talk to a dealer about adding Empower Menu. We'll walk through your surfaces — QR, tablet, signage, inventory — and the rollout timeline."
