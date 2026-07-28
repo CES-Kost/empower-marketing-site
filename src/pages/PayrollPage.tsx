@@ -6,7 +6,6 @@ import { PayrollHero } from '../components/payroll/PayrollHero';
 import { IntegrationGrid } from '../components/payroll/IntegrationGrid';
 import { PayrollFeatures } from '../components/payroll/PayrollFeatures';
 import { IncludedReporting } from '../components/payroll/IncludedReporting';
-import { PayrollTestimonial } from '../components/payroll/PayrollTestimonial';
 
 export const PayrollPage: React.FC = () => {
     return (
@@ -16,7 +15,7 @@ export const PayrollPage: React.FC = () => {
             <IntegrationGrid />
             <PayrollFeatures />
             <IncludedReporting />
-            <PayrollTestimonial />
+            {/* KB-232: testimonial hidden until Johnnie's real quote lands — no bracket placeholder or named pick-owner in public markup */}
             <DealerCTA
                 headline="Ready to make payroll a 10-minute job?"
                 subheadline="Talk to a dealer about adding Empower Payroll. We'll walk through your provider, your tip-pool rules, and your scheduling stack — and the rollout timeline."
