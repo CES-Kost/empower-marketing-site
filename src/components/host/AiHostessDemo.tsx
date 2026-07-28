@@ -13,12 +13,12 @@ export const AiHostessDemo: React.FC = () => {
         <section id="demo" className={styles.section}>
             <div className={`container ${styles.inner}`}>
                 <div className={styles.header}>
-                    <div className={styles.eyebrow}>AI Hostess — Live Demo</div>
+                    <div className={styles.eyebrow}>AI Hostess — Concept Preview</div>
                     <h2 className={styles.headline}>
-                        Hear what your <span className="text-gradient">phone sounds like</span> at 11pm on a Saturday.
+                        Hear what your <span className="text-gradient">phone could sound like</span> at 11pm on a Saturday.
                     </h2>
                     <p className={styles.lead}>
-                        A short walkthrough of a real inbound call — the AI hostess takes the booking, confirms the party size, drops the reservation onto the host stand, and the team only gets pulled in when it should be.
+                        A preview of what a guest call could sound like — the AI hostess would take the booking, confirm the party size, and drop the reservation onto the host stand, looping the team in only when it should be.
                     </p>
                 </div>
 
