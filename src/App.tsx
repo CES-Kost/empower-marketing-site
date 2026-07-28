@@ -7,6 +7,7 @@ import { ReportingPage } from './pages/ReportingPage';
 import { HostPage } from './pages/HostPage';
 import { CateringPage } from './pages/CateringPage';
 import { ToolsPage } from './pages/ToolsPage';
+import { NotFound } from './pages/NotFound';
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -48,7 +49,7 @@ function App() {
         <Route path="/catering" element={<CateringPage />} />
         <Route path="/tools" element={<ToolsPage />} />
         <Route path="/contact" element={<Navigate to="/#contact" replace />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
