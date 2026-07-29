@@ -17,7 +17,7 @@ export const HostHero: React.FC = () => {
                         Never lose a guest <span className="text-gradient">at the door.</span>
                     </h1>
                     <p className={styles.subheadline}>
-                        Waitlist, reservations with two-way SMS, and an AI hostess that takes calls and DMs from your website — all wired directly into your Genius POS so the host stand and the kitchen stay in sync.
+                        Waitlist and reservations with two-way SMS, wired directly into your Genius POS so the host stand and the kitchen stay in sync — plus an AI hostess chat on your website that answers wait-time questions, texts your menu, and adds guests to the waitlist or a reservation. Phone-based AI hostess is coming soon.
                     </p>
                     <div className={styles.buttons}>
                         <a href="/#contact" className="btn btn-primary">Talk to a Dealer</a>
@@ -38,7 +38,7 @@ export const HostHero: React.FC = () => {
                         </div>
                         <div className={`${styles.hostCard} ${styles.h3}`}>
                             <div className={styles.cardLabel}>AI Hostess</div>
-                            <div className={styles.cardSub}>web · phone · 24/7</div>
+                            <div className={styles.cardSub}>web chat · live</div>
                         </div>
                     </div>
                 </div>

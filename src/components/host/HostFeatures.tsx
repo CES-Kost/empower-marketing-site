@@ -42,10 +42,10 @@ const features: Feature[] = [
     {
         id: 'ai-hostess',
         eyebrow: 'AI Hostess',
-        title: 'A 24/7 hostess that takes calls and DMs from your website',
-        desc: 'Voice and chat agent trained on your menu, your hours, your reservation rules, and your policies — so the phone keeps getting answered when the host is on the floor and the website chat keeps converting at 11pm. Every booking lands on the same waitlist your team is already running.',
+        title: 'A 24/7 hostess for your website chat',
+        desc: 'Chat agent trained on your menu, your hours, your reservation rules, and your policies — so the website chat keeps converting and answering guest questions at 11pm, even when the host stand is slammed. Every booking lands on the same waitlist your team is already running. Phone-based AI hostess is coming soon.',
         bullets: [
-            'Inbound voice agent — answers your number, books reservations',
+            'Phone-based AI hostess — coming soon',
             'Web chat embed for your restaurant\'s site',
             'Menu, hours, allergens, and policy answers from your real data',
             'Handoff to a human when the AI hits a question it shouldn\'t answer',
