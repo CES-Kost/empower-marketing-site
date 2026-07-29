@@ -50,10 +50,10 @@ export const routes = [
     path: '/host',
     title: 'Empower Host | Waitlist, Reservations & AI Hostess',
     description:
-      'Waitlist, reservations with two-way SMS, and an AI hostess that takes calls and DMs — wired directly into your Genius POS.',
+      'Waitlist, reservations with two-way SMS, and an AI hostess chat that answers wait-time questions and adds guests to the list — wired directly into your Genius POS.',
     ogTitle: 'Empower Host — Never lose a guest at the door.',
     ogDescription:
-      'Waitlist, reservations with two-way SMS, and an AI hostess that takes calls and DMs from your website — all wired directly into your Genius POS.',
+      'Waitlist and reservations with two-way SMS, wired directly into your Genius POS — plus an AI hostess chat on your website that answers wait-time questions, texts your menu, and adds guests to the waitlist or a reservation.',
     ogImage: DEFAULT_OG_IMAGE,
     ogType: 'product',
     twitterCard: 'summary_large_image',
