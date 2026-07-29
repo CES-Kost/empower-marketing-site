@@ -44,7 +44,7 @@ export const routes = [
     ogType: 'website',
     twitterCard: 'summary_large_image',
     canonical: null,
-    copyStatus: 'draft',
+    copyStatus: 'final',
   },
   {
     path: '/host',
@@ -58,7 +58,7 @@ export const routes = [
     ogType: 'product',
     twitterCard: 'summary_large_image',
     canonical: null,
-    copyStatus: 'draft',
+    copyStatus: 'final',
   },
   {
     path: '/menu',
@@ -72,7 +72,7 @@ export const routes = [
     ogType: 'product',
     twitterCard: 'summary_large_image',
     canonical: null,
-    copyStatus: 'draft',
+    copyStatus: 'final',
   },
   {
     path: '/payroll',
@@ -86,7 +86,7 @@ export const routes = [
     ogType: 'product',
     twitterCard: 'summary_large_image',
     canonical: null,
-    copyStatus: 'draft',
+    copyStatus: 'final',
   },
   {
     path: '/reporting',
@@ -100,7 +100,7 @@ export const routes = [
     ogType: 'product',
     twitterCard: 'summary_large_image',
     canonical: null,
-    copyStatus: 'draft',
+    copyStatus: 'final',
   },
   {
     path: '/catering',
@@ -114,7 +114,7 @@ export const routes = [
     ogType: 'product',
     twitterCard: 'summary_large_image',
     canonical: null,
-    copyStatus: 'draft',
+    copyStatus: 'final',
   },
   {
     path: '/tools',
@@ -128,6 +128,6 @@ export const routes = [
     ogType: 'product',
     twitterCard: 'summary_large_image',
     canonical: null,
-    copyStatus: 'draft',
+    copyStatus: 'final',
   },
 ];
