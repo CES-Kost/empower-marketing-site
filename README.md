@@ -1,3 +1,24 @@
+> # ⛔ SUPERSEDED — THIS IS NOT THE LIVE MARKETING SITE
+>
+> **As of 2026-07-29, `marketing.empowerpos.com` serves
+> [`CES-Kost/empower-marketing-site-v2`](https://github.com/CES-Kost/empower-marketing-site-v2), not this repo.**
+> That repo is the **single source of truth** for the marketing site. Make changes there.
+>
+> Everything below this banner describes the **old** site and is kept for reference only.
+> In particular: the "served behind Caddy in production" line and the page list are **no
+> longer true**, and merges to this repo **do not reach production**. Several merges here
+> (#10, #11, #12/KB-232) shipped to git and were never served — that gap is why the site
+> was replaced.
+>
+> **Do not delete this repo.** It holds the original contact-form → CRM lead-intake work
+> (`api/contact.ts`, KB-174) that v2's contact service was derived from, plus the history
+> behind the current copy. It is reference material, not dead weight.
+>
+> Note for anyone comparing the two: `/payroll` and `/tools` existed here and are **not**
+> in v2. That is a live product decision owned by Lindsay and Reese, not an oversight to
+> "fix" by porting them back — `/payroll` in particular described punch-data export rather
+> than payroll processing, which is exactly the confusion the rename avoids.
+
 # empower-marketing-site
 
 Public marketing site for Empower POS Solutions. React + TypeScript + Vite, path-based routing via react-router-dom v6, served behind Caddy in production.
